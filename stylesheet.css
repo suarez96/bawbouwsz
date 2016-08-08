@@ -123,7 +123,9 @@ nav{
 .lose-screen{
 	background-color:#da0404;
 	z-index:50;
-	font-size: 300%;
+}
+.lose-screen > p{
+	font-size: 3em;
 }
 .win{
 	border-style: none;

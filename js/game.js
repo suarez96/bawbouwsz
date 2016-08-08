@@ -99,7 +99,13 @@ $(function(){
 		}
 
 		function newCountdown(){
-			t = setInterval(function() {$('.time-left').html(parseInt($('.time-left').html()) - parseInt(1));}, 1000);
+			t = setInterval(function() {
+				$('.time-left').html(parseInt($('.time-left').html()) - parseInt(1));
+				if (parseInt($('.time-left').html()) == 0) {
+					loseSequence();
+					
+				}
+			}, 1000);
 			return t;
 		}
 
@@ -127,6 +133,7 @@ $(function(){
 		function loseSequence(){
 			$('.lose-screen').css('display',  "block");
 			clearInterval(countDown);
+			clearInterval(generatorTimer);
 			$('.stop-btn').prop('disabled', 'disabled');
 			$('.stop-btn').attr('opacity', '0.5');
 		}
