@@ -18,25 +18,30 @@ body{
 	position: absolute;
 	border-radius:100%;
 	z-index: 10;
-	font-size: 20px;
+	font-size: 8px;
+	padding: 3em;
 	text-align: center;
 }
 .bubble > p{
 	color: #000;
 	text-shadow: 1px 1px 5px #fff;
-	margin-top: 18%;
+	margin-top: -0.4em;
+	margin-left: -0.4em;
 }
 .game{
 	position: relative;
 	padding: 20% 5%;
 	height: 100%;
 	width: 50%;
-	float: right;
-	margin-right: 5%;
-	margin-top: 3.8em;
+	margin: auto;
+	/*margin-top: -1em;*/
+	/*margin-right: 5%;*/
+	overflow: hidden;
 }
+
 .game, nav, body{
-	background-color: #171414;
+	background-color: #fdffe1;
+	/*background-color: #171414;*/
 }
 nav, .win, .game, .stop-btn:hover, .new-game-btn:hover, .operator:hover{
 	border: 1px solid #00dc37;
@@ -47,15 +52,20 @@ nav, .win, .game, .stop-btn:hover, .new-game-btn:hover, .operator:hover{
 	display: inline;
 }
 nav{
+	display: inline-block;
 	opacity:1;
 	text-align: center;
 	height: 100%;
 	float: left;
+	margin-left: 1em;
+	margin-top: -0.8em;
 	width: 12em;
 }
+
 .operator-container{
 	display: inline-block;
 }
+
 .operator{
 	border-style: none;
 	margin-top: 0.8em !important;
@@ -113,18 +123,22 @@ nav{
 	z-index:40;
 }
 .title{
-	position: absolute;
-	z-index: 40;
+	/*position: absolute;
+	z-index: 40;*/
+	position: relative;
+	display: block;
 	margin: auto;
+	margin-bottom: 0.4em;
+	text-align: center;
 	font-size: 54px;
-	left: 40%;
+	/*left: 40%;*/
 	color: #3de840;
 }
 .lose-screen{
 	background-color:#da0404;
 	z-index:50;
 }
-.lose-screen > p{
+.lose-screen > p, .stop-screen > p{
 	font-size: 3em;
 }
 .win{
@@ -144,4 +158,68 @@ nav{
 }
 .win:hover, .operator:hover, .stop-btn:hover, .new-game-btn:hover{
 	transform: scale(1.05, 1.05);
+}
+
+/*START MEDIA QUERIES*/
+
+@media screen and (max-width: 991px){
+	*{
+		font-size: 20px;
+	}
+	.bubble{
+		font-size: 12px;
+		padding: 1em;
+	}
+	.bubble > p{
+		margin-top: 0em;
+	}
+	.game{
+		width: 50%;
+		padding: 80% 5% 30% 5%;/*put 80% only on portrait orientation*/
+		margin-bottom: 1em;
+		/*margin-top: 1em;*/
+		overflow: visible;
+	}	
+	
+	nav{
+		float: none;
+		display: block;
+		width: 80%;
+		margin: 1em auto;
+	}
+
+	.score, .target, .time-left, .operator, .stop-btn, .new-game-btn{
+		text-align: center;
+		display: inline;
+		font-size: 12px;
+		margin-top: 0.4em;
+		margin-bottom: 0.4em;
+	}
+	.stop-btn, .new-game-btn{
+		width: 22%;
+	}
+	.lose-screen > p, .stop-screen > p{
+		font-size: 1em;
+		text-align: center;
+		/*left: 24%;*/
+	}
+	.title{
+		font-size: 24px;
+		margin-bottom: 0;
+	}
+}
+
+/*scrollbar styles, only visible in safari and chrome*/
+::-webkit-scrollbar{
+  width: 6px;  /* for vertical scrollbars */
+  height: 6px; /* for horizontal scrollbars */
+}
+::-webkit-scrollbar-track{
+  background: #411934;
+}
+::-webkit-scrollbar-thumb{
+  background: #3de840;
+}
+::-webkit-scrollbar-corner{
+    background: #2C001E;
 }
