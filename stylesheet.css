@@ -175,7 +175,7 @@ nav{
 	}
 	.game{
 		width: 50%;
-		padding: 80% 5% 30% 5%;/*put 80% only on portrait orientation*/
+		padding: 50% 5% 30% 5%;/*put 80% only on portrait orientation*/
 		margin-bottom: 1em;
 		/*margin-top: 1em;*/
 		overflow: visible;
