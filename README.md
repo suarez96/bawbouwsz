@@ -3,4 +3,4 @@
 ![Gameplay](/res/gameplay.png)
 The objective is to match your current score (top number on the left div) to the target score (middle number) by popping the bubbles you hover over. When you pop a bubble, your score is modified by the number inside the bubble. The bottom number on the left div is your countdown timer; you have 20 seconds to reach the target score, or you lose the game.<br>
 <br>To play: go to the github.io page which is posted [here](https://suarez96.github.io/bawbouwsz/).<br>
-<br><em> Your fans might start whirring very loudly. That is a feature, not a bug <em>
+<br><em> Your fans might start whirring very loudly. That is a feature, not a bug.<em>
